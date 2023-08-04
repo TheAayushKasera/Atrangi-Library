@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@mainpage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.MainpageController">
+   <top>
+      <Label fx:id="atlogo" alignment="CENTER" prefHeight="43.0" prefWidth="700.0" style="-fx-background-color: #03071e;" text="Atarangi Library Management Application" textFill="ORANGE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addmember" mnemonicParsing="false" onAction="#addmembers" prefHeight="66.0" prefWidth="100.0" text="Add Member" />
+            <Button fx:id="memberdetails" mnemonicParsing="false" onAction="#memberdetails" prefHeight="66.0" prefWidth="100.0" text="Member Details" />
+            <Button fx:id="Addbook" mnemonicParsing="false" onAction="#addbooks" prefHeight="66.0" prefWidth="100.0" text="Add Books" />
+            <Button fx:id="bookdetails" mnemonicParsing="false" onAction="#bookdetails" prefHeight="66.0" prefWidth="100.0" text="Book Details" />
+            <Button fx:id="allbooks" mnemonicParsing="false" onAction="#allbooks" prefHeight="66.0" prefWidth="100.0" text="Delete Books" />
+            <Button fx:id="allmembers" mnemonicParsing="false" onAction="#allmembers" prefHeight="66.0" prefWidth="100.0" text="Delete Member" />
+            <Button fx:id="issuedbooks" mnemonicParsing="false" onAction="#issuedbooks" prefHeight="66.0" prefWidth="100.0" text="Issued Books" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="issuetb" onSelectionChanged="#colrchange" text="Issue Books">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="180.0" prefWidth="600.0">
+                                 <children>
+                                    <Label text="Book Information" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="bookID" promptText="Enter Book ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="180.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Member Information" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="MemberID" promptText="Enter Member ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="issue" mnemonicParsing="false" onAction="#issue" prefHeight="67.0" prefWidth="600.0" text="Issue Book" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="reissuetb" onSelectionChanged="#colrchange" text="Reissue/Renew Books">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="180.0" prefWidth="600.0">
+                                 <children>
+                                    <Label text="Book Information" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="bookID1" promptText="Enter Book ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="180.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Member Information" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="MemberID1" promptText="Enter Member ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="reissue" mnemonicParsing="false" prefHeight="67.0" prefWidth="600.0" text="Reissue/Renew Book" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="givebacktb" onSelectionChanged="#colrchange" text="Give Back">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="180.0" prefWidth="600.0">
+                                 <children>
+                                    <Label text="Book Information" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="bookID2" promptText="Enter Book ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="180.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Member Information" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="MemberID2" promptText="Enter Member ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="giveback" mnemonicParsing="false" prefHeight="67.0" prefWidth="600.0" text="Give Back" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="abouttb" onSelectionChanged="#colrchange" text="About">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="200.0" layoutY="59.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label prefHeight="62.0" prefWidth="624.0" text="Build in Javafx and MySql database is used.">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="45.0" prefWidth="614.0" text="Created By: Aayush Kasera" textFill="ORANGE">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="660.0" text="Contact:9549303617">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="33.0" prefWidth="372.0" text="Email:aayushksr@gmail.com">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

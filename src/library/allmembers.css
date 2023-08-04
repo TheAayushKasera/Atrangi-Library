@@ -1,0 +1,16 @@
+#logo{
+    -fx-background-color:black;
+}
+.table-column{
+    -fx-background-color:#fcbf49;
+    -fx-border-width:2px;
+    -fx-border-color:#eae2b7;
+}
+.table-view{
+    -fx-background-color:greenyellow;
+}
+.table-column:hover{
+    -fx-background-color:#eae2b7;
+    -fx-border-width:2px;
+    -fx-border-color:#fcbf49;
+}

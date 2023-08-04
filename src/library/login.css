@@ -1,0 +1,22 @@
+VBox{
+    -fx-background-color:greenyellow;
+   
+    
+}
+.label{
+    -fx-background-color:black;
+}
+.button{
+    -fx-background-color:#fcbf49;
+    -fx-border-color:white;
+    -fx-border-width:0.5px;
+}
+.button:hover{
+    -fx-background-color:#eae2b7;
+    -fx-border-color:#fcbf49;
+    -fx-border-width:0.5px;
+}
+.text-field{
+    -fx-border-width:0 0 5 0;
+    -fx-border-color:#fcbf49;
+}
